@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*color palette*/
+  --headerbg-color: #8E9AAF;
+  --headerRange-color: #CBC0D3;
+  --txtrange-color: #fff;
+  --txtdescription-color: #23053A;
+  --bodybg-color: #EFF1FF;
+  --txtcard-color: #4A4E69;
+  --ballonCardbg-color: #FEEAFA;
+
+  /*typography*/
+  --ff-general: 'Staatliches', sans-serif;
+  --ff-description: 'Palanquin', sans-serif;
+
+  /*font size*/
+  font-size: 62.5%;
+  --fs-headerRange: 4.0rem;
+  --fs-card: 2.0rem;
+  --fs-description: 2.0rem;
+}
+
+body {
+  background-color: var(--bodybg-color);
+  font-family: var(--ff-general);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  background-color: var(--headerbg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+  padding: 3.2rem 0 2.9rem;
+}
+
+header #logo {
+  width: 13.7rem;
+}
+
+header h1 {
+  background-color: var(--headerRange-color);
+  color: var(--txtrange-color);
+  text-align: center;
+  width: 100%;
+
+  font-size: var(--fs-headerRange);
+  font-weight: 400;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  padding: 7px 0;
+}
+
+main {
+  max-width: 32.0rem;
+  margin: 2.0rem 0 6.0rem;
+}
+
+main h2 {
+  font-family: var(--ff-description);
+  font-size: var(--fs-description);
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--txtdescription-color);
+
+  text-align: center;
+  padding: 0 3.0rem;
+  margin-bottom: 6.0rem;
+}
+
+main .products_cards {
+  display: grid;
+  gap: 3.2rem;
+}
+
+.products_cards .card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  object-fit: contain;
+}
+
+.products_cards .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.products_cards .card h3 {
+  position: absolute;
+  bottom: 20rem;
+  left: 21.8rem;
+
+  font-size: var(--fs-card);
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0.05em;
+  color: var(--txtcard-color);
+  background-color: var(--ballonCardbg-color);
+  border-radius: 2.0rem;
+  width: fit-content;
+  padding: 0.3rem 1.5rem;
+}
+
+.products_cards :nth-child(2) h3 {
+  bottom: 40rem;
+  left: 22rem;
+}
+
+.products_cards :nth-child(4) h3 {
+  bottom: 40rem;
+  left: 21.6rem;
+}
+
+/*Media squires*/
+
+@media (min-width: 320px) {
+  .products_cards {
+    padding: 2.0rem ;
+  }
+
+  .products_cards .card h3 {
+    bottom: 17rem;
+    left: 18rem;
+  }
+  
+  .products_cards :nth-child(2) h3 {
+    bottom: 34.5rem;
+    left: 18rem;
+  }
+  
+  .products_cards :nth-child(4) h3 {
+    bottom: 34.5rem;
+    left: 17.5rem;
+  }
+}
