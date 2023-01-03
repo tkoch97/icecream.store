@@ -232,6 +232,11 @@ main .products_cards {
     bottom: 34.5rem;
     left: 18rem;
   }
+
+  .products_cards :nth-child(3) h3 {
+    bottom: 17rem;
+    left: 19rem;
+  }
   
   .products_cards :nth-child(4) h3 {
     bottom: 34.5rem;
@@ -258,5 +263,9 @@ main .products_cards {
   .products_cards .card h3 {
     bottom: 26rem;
     left: 12rem;
+  }
+
+  .products_cards :nth-child(3) h3 {
+    left: 13.2rem;
   }
 }
