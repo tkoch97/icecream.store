@@ -135,7 +135,7 @@ header .desktop-description {
 
 main {
   max-width: 32.0rem;
-  margin: 2.0rem 0 6.0rem;
+  margin: 6.0rem 0;
 }
 
 main h2 {
@@ -157,7 +157,7 @@ main h2 {
 
 main .products_cards {
   display: grid;
-  gap: 3.2rem;
+  gap: 3rem;
   animation: downtop 1s;
   animation-timing-function: ease;
   animation-delay: 0.8s;
@@ -242,26 +242,21 @@ main .products_cards {
 @media (min-width: 600px) {
 
   main {
-    max-width: 40.0rem;
-    margin-top: 3.0rem;
+    max-width: 50.0rem;
+    margin-top: 6.0rem;
+  }
+
+  .products_cards .card {
+    max-width: 22.0rem;
   }
 
   .products_cards {
-    grid-template-columns: 70% 50%;
+    grid-template-columns: 50% 50%;
+    padding: 0;
   }
 
   .products_cards .card h3 {
-    bottom: 20rem;
-    left: 15rem;
-  }
-  
-  .products_cards :nth-child(2) h3 {
-    bottom: 20rem;
-    left: 8rem;
-  }
-  
-  .products_cards :nth-child(4) h3 {
-    bottom: 20rem;
-    left: 7.5rem;
+    bottom: 26rem;
+    left: 12rem;
   }
 }
