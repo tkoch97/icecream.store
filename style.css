@@ -17,12 +17,16 @@
   /*typography*/
   --ff-general: 'Staatliches', sans-serif;
   --ff-description: 'Palanquin', sans-serif;
+  --ff-descriptionDk: 'Roboto', sans-serif;
+  --ff-footer: 'Open Sans', sans-serif;
 
   /*font size*/
   font-size: 62.5%;
   --fs-headerRange: 4.0rem;
+  --fs-headerRangeDk: 4.8rem;
   --fs-card: 2.0rem;
   --fs-description: 2.0rem;
+  --fs-descriptionDk: 2.4rem;
 }
 
 /*animações*/
@@ -74,15 +78,27 @@
   }
 }
 
+/*Mobile none*/
+
+header .desktop-description {
+  display: none;
+}
+
+footer {
+  display: none;
+}
+
+/* Geral Code */
+
 body {
   background-color: var(--bodybg-color);
   font-family: var(--ff-general);
 }
 
 .page {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
 }
 
 header {
@@ -129,13 +145,9 @@ header h1 {
   animation-timing-function: ease-in-out;
 }
 
-header .desktop-description {
-  display: none;
-}
-
 main {
   max-width: 32.0rem;
-  margin: 6.0rem 0;
+  margin: 6.0rem auto;
 }
 
 main h2 {
@@ -167,14 +179,14 @@ main .products_cards {
 
 .products_cards .card {
   width: 100%;
-  height: 100%;
+  height: fit-content;
   position: relative;
   object-fit: contain;
 }
 
 .products_cards .card img:hover {
   transform: scale(1.1);
-  filter: saturate(2);
+  filter: saturate(1.5);
 }
 
 .products_cards .card img {
@@ -242,6 +254,16 @@ main .products_cards {
     bottom: 34.5rem;
     left: 17.5rem;
   }
+
+  .products_cards :nth-child(5) h3 {
+    bottom: 12rem;
+    left: 19.5rem;
+  }
+
+  .products_cards :nth-child(6) h3 {
+    bottom: 32rem;
+    left: 17.5rem;
+  }
 }
 
 @media (min-width: 600px) {
@@ -253,6 +275,7 @@ main .products_cards {
 
   .products_cards .card {
     max-width: 22.0rem;
+    height: 100%;
   }
 
   .products_cards {
@@ -267,5 +290,100 @@ main .products_cards {
 
   .products_cards :nth-child(3) h3 {
     left: 13.2rem;
+  }
+
+  .products_cards :nth-child(5) h3 {
+    bottom: 24rem;
+    left: 14rem;
+  }
+
+  .products_cards :nth-child(6) h3 {
+    bottom: 24rem;
+    left: 12rem;
+  }
+}
+
+@media (min-width:1020px) {
+
+  .page {
+    display: flex;
+  }
+
+  main h2 {
+    display: none;
+  }
+  
+  
+  header {
+    width: 37.7rem;
+    height: 100vh;
+    align-items: center;
+    position:fixed;
+    animation: leftright 1s;
+    animation-timing-function: ease-in-out;
+  }
+  
+  header #logo {
+    width: 21.5rem;
+  }
+  
+  header h1 {
+    font-size: var(--fs-headerRangeDk);
+    padding: 18px;
+  }
+  
+  header .desktop-description {
+    display: inline;
+    font-family: var(--ff-descriptionDk);
+    font-size: var(--fs-descriptionDk);
+    font-weight: 400;
+    line-height: 25px;
+    color: var(--txtrange-color);
+    
+    text-align: center;
+    padding: 0 3.0rem;
+    margin-bottom: 6.0rem;
+    
+    animation: appear 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in;
+  }
+  
+  main {
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+  }
+  
+  .products_cards {
+    margin-left: 40.0rem;
+  }
+
+  footer {
+    display: block;
+    font-family: var(--ff-footer);
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 28px;
+    color: var(--txtcard-color);
+    margin-left: 40.0rem;
+
+    animation: appear 1s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in;
+  }
+
+  footer a {
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--txtcard-color);
+  }
+
+  footer a:hover {
+    color: #a952eb;
   }
 }
