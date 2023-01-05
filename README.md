@@ -1,6 +1,6 @@
 # Responsiveness - A responsive page from an ice cream shop website. 💻📱
 
-<img src="./github/preview.png" width="300px"> <img src="./github/preview3.png" width="272px" height="317px"><img src="./github/preview2.png" width="2500px">
+![preview](/github/preview.png)
 
 >Explorer Trail - Rocketseat 🪐
 ## This project was made with the mobile first concept, grids and animations on CSS. I tried to make the page very dynamic with the animations. The layout was based on a figma project provided by Rocketseat course.
